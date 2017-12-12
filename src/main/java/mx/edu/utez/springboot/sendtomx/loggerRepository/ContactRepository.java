@@ -10,6 +10,5 @@ import mx.edu.utez.springboot.sendtomx.loggerEntity.Contact;
 @Repository("contactRepository")
 public interface ContactRepository extends JpaRepository<Contact, Serializable> {
 
-	
 	public abstract Contact findById(int id);
 }

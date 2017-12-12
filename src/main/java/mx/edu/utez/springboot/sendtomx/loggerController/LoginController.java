@@ -22,8 +22,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class LoginController {
 
     private static final Log LOG = LogFactory.getLog(LoginController.class);
-    @Autowired
-    private UserService userService;
 
     @GetMapping("/login")
     public String showLoginForm(Model model,
@@ -58,20 +56,7 @@ public class LoginController {
         LOG.info("Returning to login?error view");
         return "redirect:/contacts/showcontacts";
     }
-
-    @RequestMapping(value = "/registrarUsuario", method = RequestMethod.POST)
-    public String addContact(@ModelAttribute("contactModel") UserModel userModel, RedirectAttributes model) {
-        LOG.info("METHOD: addcontact() --PARAM : contactModel=" + userModel);
-        if (null != userService.addUser(userModel)) {
-            model.addFlashAttribute("result", 1);
-        } else {
-            model.addFlashAttribute("result", 0);
-        }
-        return "redirect:/login";
-    }
     
-    
-
     /*
 	@GetMapping("/")
 	public String redirectToLogin(){

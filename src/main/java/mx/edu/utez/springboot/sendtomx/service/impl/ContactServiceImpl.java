@@ -18,7 +18,6 @@ public class ContactServiceImpl implements  ContactService{
 	@Autowired
 	private ContactRepository contactRepository;
 	
-	
 	@Autowired
 	private ContactConverter contactConverter;
 	

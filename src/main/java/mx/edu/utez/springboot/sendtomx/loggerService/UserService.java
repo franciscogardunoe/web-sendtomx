@@ -14,11 +14,15 @@ import mx.edu.utez.springboot.sendtomx.loggerModel.UserModel;
  * @author Daniel
  */
 public interface UserService {
-    
-        public abstract UserModel addUser(UserModel userModel);
-	public abstract List<UserModel> listAllUsers();
-	public abstract User findUserById(int id);
-	public abstract UserModel findUserByIdModel(int id);
-	public abstract void removeUser(int id);
-    
+
+    public abstract UserModel addUser(UserModel userModel);
+
+    public abstract List<UserModel> listAllUsers();
+
+    public abstract User findUserById(int id);
+
+    public abstract UserModel findUserByIdModel(int id);
+
+    public abstract void removeUser(int id);
+
 }
